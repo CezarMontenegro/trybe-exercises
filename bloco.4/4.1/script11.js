@@ -3,7 +3,7 @@ let sbruto = 3000;
 if (sbruto<0) {
     console.log("erro");
 }
-else if (sbruto<=1556,94){
+else if (sbruto<=1556.94){
     alinss = sbruto*0.08;
 }
 else if (sbruto<=2594.92){
@@ -22,7 +22,7 @@ sbase = sbruto - alinss;
 if (sbase<=1903.98){
     alir = 0;
 }
-else if (sbase<=2826,65){
+else if (sbase<=2826.65){
     alir = (sbase*0.075) - 142.8;
 }
 else if (sbase<=3751.05){
