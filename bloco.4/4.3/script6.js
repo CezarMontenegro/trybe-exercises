@@ -1,4 +1,4 @@
-let n = 27;
+let n = 37;
 let index;
 
 for (index = 2; index <= n; index += 1){
