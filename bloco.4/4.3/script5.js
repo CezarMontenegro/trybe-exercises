@@ -1,5 +1,5 @@
-let espacos = ' ';
-let espacos2 = ' ';
+let espacos = '0';
+let espacos2 = '0';
 let asterisc ='*';
 let line = '';
 let line2 = '';
@@ -25,5 +25,5 @@ for ( i = 1; i < quantidadeLinhas; i += 1){
 for (i3 = 1; i3 <= n; i3 +=1){
     line3 = line3+asterisc;
 }
-console.log(line3);
+
 

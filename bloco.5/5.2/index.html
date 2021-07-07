@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let tagH1 = document.createElement("h1");
+      tagH1.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(tagH1);
+
+      let mainDiv = document.createElement("div");
+      mainDiv.classList.add("main-content");
+      document.body.appendChild(mainDiv);
+
+      let centerDiv = document.createElement("div")
+      centerDiv.classList.add("center-content");
+      mainDiv.appendChild(centerDiv);
+
+      let tagP = document.createElement("p");
+      tagP.innerText = "Some random text";
+      centerDiv.appendChild(tagP);
+
+      let leftDiv = document.createElement("div");
+      leftDiv.classList.add("left-content");
+      mainDiv.appendChild(leftDiv);
+
+      let rightDiv = document.createElement("div");
+      rightDiv.classList.add("right-content")
+      mainDiv.appendChild(rightDiv);
+
+      let picture = document.createElement("img");
+      picture.src = "https://picsum.photos/200";
+      picture.classList.add("small-image");
+      leftDiv.appendChild(picture);
+
+      let list = document.createElement("ul");
+      let numbers = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      for (index=0;index<numbers.length;index+=1){
+        let li = document.createElement("li");
+        li.innerText = numbers[index];
+        list.appendChild(li);
+      }
+      rightDiv.appendChild(list);
+
+      for(index2=0;index2===2;index2+=1){
+          let tagH3 = document.createElement("h3");
+          tagH3.innerText = index2;
+          mainDiv.appendChild(tagH3);
+      };
+      
+      
+
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+ 
+
+
+
+</script>
+</html> 
