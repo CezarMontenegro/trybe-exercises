@@ -88,20 +88,44 @@
 
       let list = document.createElement("ul");
       let numbers = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
-      for (index=0;index<numbers.length;index+=1){
+      for (let index=0;index<numbers.length;index+=1){
         let li = document.createElement("li");
         li.innerText = numbers[index];
         list.appendChild(li);
       }
       rightDiv.appendChild(list);
 
-      for(index2=0;index2===2;index2+=1){
+      for(let index=0;index<3;index+=1){
           let tagH3 = document.createElement("h3");
-          tagH3.innerText = index2;
+          tagH3.innerText = index;
           mainDiv.appendChild(tagH3);
-      };
+       };
+
+       let title = document.querySelector("h1");
+       title.classeName = "title";  
+
+       let description = document.getElementsByTagName("h3");
+       for(let index=0;index<3;index+=1){
+           description[index].className = "description";
+       };
+
+       divRemotion = document.querySelector(".left-content");
+       mainDiv.removeChild(divRemotion);
+
+       let centralDiv = document.querySelector(".right-content");
+       centralDiv.style.marginRight = "auto";
+
+       let dadcolor = document.querySelector(".center-content");
+       dadcolor.parentElement.style.backgroundColor = "green";
+
+       ul.lastChild.remove(li);
+       ul.lastChild.remove(li);
+
+
       
-      
+
+           
+
 
 
 
