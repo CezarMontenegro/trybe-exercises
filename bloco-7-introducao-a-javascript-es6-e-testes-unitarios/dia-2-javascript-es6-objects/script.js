@@ -45,5 +45,6 @@ const order = {
         keys(order.order.pizza)[0]}, ${Object.keys(order.order.pizza)[1]} e ${order.order.drinks.coke.type}, é R$${order.payment.total}`);
   
   }
-  
   orderModifier(order);
+
+  
