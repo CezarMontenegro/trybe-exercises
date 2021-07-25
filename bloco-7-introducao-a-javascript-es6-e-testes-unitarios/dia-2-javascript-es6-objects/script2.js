@@ -50,3 +50,24 @@ const lesson1 = {
     return teste;
   }
   console.log(verifyPair(lesson3, 'turno', 'noite'));
+
+
+const countStudent = (obj) => {
+  let cont = 0;
+  const array = Object.keys(obj);
+  for(let index = 0; index < array.length; index +=1){
+    if(obj[Object.keys(obj)[index]].materia === 'Matemática' ){
+      cont += obj[Object.keys(obj)[index]].numeroEstudantes;
+    }
+  }
+  return cont;
+}
+console.log(countStudent(allLessons));
+
+
+
+
+
+
+
+
