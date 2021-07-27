@@ -1,0 +1,65 @@
+body {
+    background-image: url(image4.jpg);
+    background-size: cover;
+}
+
+
+#title {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#box-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#input-vqv {
+    margin-right: 25px;
+}
+
+#new-color {
+    margin-right: 25px;
+}
+
+
+#pixel-board {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:  center;
+}
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+}
+
+#black{
+    background-color: black;
+}
+
+
+
+.pixel{
+    background-color: white;
+    border: 1px solid rgb(238, 229, 229);
+    display: flex;
+    margin: 0px;
+}
+
+
+
