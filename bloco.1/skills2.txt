@@ -1,8 +1,0 @@
-Internet
-Unix
-Bash
-Trybe
-Trybe2
-Trybe3
-Maca
-Luiz
