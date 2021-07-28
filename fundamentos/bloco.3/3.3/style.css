@@ -1,0 +1,61 @@
+ol {
+  background-color: yellow;
+}
+
+.impar {
+  color: green;
+}
+
+.par {
+  text-transform: uppercase;
+}
+
+h1,h3 {
+  color: red;
+}
+
+.italico {
+  text-size-adjust: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20PX;
+}
+
+Li em {
+  font-weight: bold;
+}
+
+.primeira {
+  color:blue;
+}
+
+.segunda {
+  background-color: pink;
+}
+
+#um:hover {
+  font-weight: bold;
+  background-color: orange;
+}
+
+#dois:hover {
+  font-weight: bold;
+  background-color: green;
+}
+
+#tres:hover {
+  font-weight: bold;
+  background-color: black;
+}
+
+#quatro:hover {
+  font-weight: bold;
+  background-color: yellow;
+}
+
+#cinco:hover {
+  font-weight: bold;
+  background-color: green;
+}
