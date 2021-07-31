@@ -11,8 +11,7 @@ function checkAnswer(array, array2){
             contador += 1;
         } else if (array2[index] === 'N.A'){
             contador = contador ; 
-        } else {contador -= .5;
-        }
+        } else {contador -= .5;}
     }
     return contador;
 };
