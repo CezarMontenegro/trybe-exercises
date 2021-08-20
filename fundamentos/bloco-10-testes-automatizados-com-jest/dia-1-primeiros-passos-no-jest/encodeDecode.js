@@ -1,4 +1,4 @@
-function encode(strg){
+function encode(strg) {
     let newstrg = "";
     for (index3 = 0; index3 < strg.length; index3 +=1){
       if (strg[index3] === "a"){
@@ -20,10 +20,10 @@ function encode(strg){
       }
     }
     return newstrg;
-  }
+}
 
-  function decode(strg2) {
-    let newstrg2 = "";
+function decode(strg2) {
+  let newstrg2 = "";
     for (index4 = 0; index4 < strg2.length; index4 +=1){
       if (strg2[index4] === "1"){
         newstrg2 = newstrg2 + "a";
@@ -44,6 +44,6 @@ function encode(strg){
       }
     }
     return newstrg2;
-  }
+}
 
-  module.exports = encode;
+  module.exports = { encode, decode };
