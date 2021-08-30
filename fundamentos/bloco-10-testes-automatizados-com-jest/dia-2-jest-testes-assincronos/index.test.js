@@ -68,7 +68,7 @@ describe('Requesting cities from api', () => {
     expect(isCity('Manaus')).toBeTruthy();
   });
 
-  it('should have the city of Piauí', () => {
+  it('should have the   city of Piauí', () => {
     expect(isCity('Piauí')).toBeTruthy();
   });
 });
