@@ -1,4 +1,6 @@
 import React from 'react';
+import InputEmail from './email';
+import InputName from './nome';
 
 class Form extends React.Component {
   constructor () {
@@ -8,47 +10,42 @@ class Form extends React.Component {
       nome: '',
       email: '',
       terms: false, 
+      file: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange({ target }) {
-    const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-
+  handleChange = (event) => {
+    const { name, value } = event.target;
     this.setState({ [name]: value });
   }
 
   render() {
-    const { email, name, terms} = this.state;
+    const { email, nome, terms, file} = this.state;
     return (
-      <div>
-         <label htmlFor="terms">
-              <input
-                type="checkbox"
-                name="terms"
-                onChange={ this.handleChange }
-                value={ terms }
-              />
-              Concordo com termos e acordos
-            </label>
+      <fieldset>
+        <label htmlFor="terms">
+          <input
+            type="checkbox"
+            name="terms"
+            onChange={ this.handleChange }
+            value={ terms }
+          />
+          Concordo com termos e acordos
+        </label>
 
-
-        <input
-          type='email'
-          name='email'
-          value={email}
-          onChange={this.handleChange}
-        />
+        <InputEmail valor={email} atualizaPai={this.handleChange}/>
+        
+        <InputName valor={nome} atualizaPai={this.handleChange}/>
 
         <input
-          type='text'
-          name='nome'
-          value={name}
+          type='file'
+          name='arquivo'
+          value={file}
           onChange={this.handleChange}
         />
-      </div>
+      </fieldset>
     );
 }
 }
