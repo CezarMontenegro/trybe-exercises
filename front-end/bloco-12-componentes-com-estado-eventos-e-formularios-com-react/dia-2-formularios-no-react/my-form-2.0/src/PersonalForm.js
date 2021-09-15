@@ -86,27 +86,3 @@ class PersonalForm extends React.Component {
 }
 
 export default PersonalForm;
-
-// eslint-disable-next-line no-lone-blocks
-{/* <div className="container">
-              <label htmlFor="house">
-                <input
-                  type="radio"
-                  id="house"
-                  name="addressType"
-                  value="house"
-                  onChange={changeHandler}
-                />
-                Casa
-              </label>
-              <label htmlFor="apart">
-                <input
-                  type="radio"
-                  id="apart"
-                  name="addressType"
-                  value="apartment"
-                  onChange={changeHandler}
-                />
-                Apartamento
-              </label>
-            </div> */}
