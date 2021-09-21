@@ -1,18 +1,18 @@
 import React from 'react';
 
-class Pokemon extends React.Component {
 
+class PokeCards extends React.Component {
   render() {
-    const {pokeLista: {image, name, type, averageWeight,}} = this.props;
+    const {name, type, averageWeight, image} = this.props.pokemon;
     return (
       <div>
-        <img src={image} alt={`Imagem do ${name}`}/>
         <p>{name}</p>
         <p>{type}</p>
         <p>{`${averageWeight.value}${averageWeight.measurementUnit}`}</p>
+        <img src={image} alt={`Imagem do ${name}`}/>
       </div>
     )
   }
 }
 
-export default Pokemon;
+export default PokeCards;

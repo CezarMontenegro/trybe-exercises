@@ -1,16 +1,16 @@
-import React from "react";
-import Pokemon from './pokemon';
+import React from 'react';
+import PokeCards from './PokeCards';
 
-class Pokedex extends React.Component {
+
+class PokeDex extends React.Component {
   render() {
     const {pokemons} = this.props;
-    return (
+    return(
       <div>
-        {pokemons.map((pokemon) => <Pokemon key={pokemon.id} pokeLista={pokemon} />)}
+       {pokemons.map((pokemon) => <PokeCards pokemon={pokemon}/>)}
       </div>
-    );
+    )
   }
 }
 
-export default Pokedex;
-
+export default PokeDex;
