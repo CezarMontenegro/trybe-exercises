@@ -10,7 +10,7 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
+  fetchCharacters = () => {
     fetch('https://rickandmortyapi.com/api/character')
     .then(response => response.json())
     .then(data => {
@@ -18,9 +18,14 @@ class App extends Component {
     })
   }
 
-  render() {
+  componentDidMount() {
+    this.fetchCharacters();
+  }
+
+
+
+ render() {
     const { characters } = this.state;
-    console.log(characters);
     return (
       <div className="App">
         <h1>
@@ -42,4 +47,3 @@ class App extends Component {
 }
 
 export default App;
-
