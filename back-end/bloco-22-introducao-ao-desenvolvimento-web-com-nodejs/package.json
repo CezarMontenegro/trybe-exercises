@@ -1,0 +1,23 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "Exercicios de node aula 22.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node imc.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CezarMontenegro/trybe-exercises.git"
+  },
+  "author": "Cezar Montenegro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CezarMontenegro/trybe-exercises/issues"
+  },
+  "homepage": "https://github.com/CezarMontenegro/trybe-exercises#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
