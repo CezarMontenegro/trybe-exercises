@@ -40,8 +40,22 @@ app.get('/simpson/:id', async (req, res) => {
     }
 
     return res.status(200).json(filtered);
-
-
 })
+
+app.post('/simpsons', async (req, res) => {
+      const { id, name } = req.body;
+  
+      const simpsons = await simpsonsUtils.getSimpsons();
+  
+      if (simpsons.map(({ id }) => id).includes(id)) {
+        return res.status(409).json({ message: 'id already exists' });
+      }
+  
+      simpsons.push({ id, name });
+  
+      await simpsonsUtils.setSimpsons(simpsons);
+  
+      return res.status(200).json(simpsons);
+    })
 
 app.listen(3001, () => console.log('ouvindo na porta 3001!'));
