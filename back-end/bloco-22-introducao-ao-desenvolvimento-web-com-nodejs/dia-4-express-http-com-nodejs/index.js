@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const simpsonsUtils = require('./fs-utils')
 
 const app = express();
 
@@ -24,8 +25,23 @@ app.put('/users/:name/:age', (req, res) => {
     res.json({"message": `Seu nome é ${name} e você tem ${age} anos de idade`})
 })
 
-app.get('/simpsons', (req, res) => {
-    res.json({"message": 'simpsons'});
-});
+app.get('/simpsons', async (req, res) => {
+    const simpsons = await simpsonsUtils.getSimpsons();
+    res.status(200).json(simpsons);
+})
+
+app.get('/simpson/:id', async (req, res) => {
+    const { id } = req.params;
+    const simpsons = await simpsonsUtils.getSimpsons();
+    const filtered = simpsons.find(simpson => id === simpson.id);
+
+    if(!filtered) {
+        return res.status(404).json({message: 'simpson not found'})
+    }
+
+    return res.status(200).json(filtered);
+
+
+})
 
 app.listen(3001, () => console.log('ouvindo na porta 3001!'));
