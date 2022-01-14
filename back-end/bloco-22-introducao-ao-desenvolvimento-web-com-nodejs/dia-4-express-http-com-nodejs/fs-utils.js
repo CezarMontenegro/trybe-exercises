@@ -1,4 +1,4 @@
-const fs = require('fs/promises');
+const fs = require('fs').promises;
 
 function getSimpsons () {
   return fs.readFile('./simpsons.json', 'utf-8')

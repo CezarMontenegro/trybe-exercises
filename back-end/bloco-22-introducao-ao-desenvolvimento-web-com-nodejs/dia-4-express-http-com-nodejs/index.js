@@ -24,4 +24,8 @@ app.put('/users/:name/:age', (req, res) => {
     res.json({"message": `Seu nome é ${name} e você tem ${age} anos de idade`})
 })
 
+app.get('/simpsons', (req, res) => {
+    res.json({"message": 'simpsons'});
+});
+
 app.listen(3001, () => console.log('ouvindo na porta 3001!'));
