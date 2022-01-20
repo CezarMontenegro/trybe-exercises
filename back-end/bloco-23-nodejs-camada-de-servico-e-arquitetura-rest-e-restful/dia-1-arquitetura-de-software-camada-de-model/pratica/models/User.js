@@ -5,16 +5,25 @@ const isUserValid = (firstName, lastName, email, password) => {
   if (password < 3) return false;
 
   return true;
-}
+};
 
-const createUser = (firstName, lastName, email, password) => {
+const createUser = async (firstName, lastName, email, password) => {
   connection.execute(
-    'INSERTO INTO model_example.users (firstName, lastName, email, password) VALUES (?, ?, ?, ?)',
+    'INSERT INTO model_example.users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
     [firstName, lastName, email, password]
   )
+};
+
+const getAll = async () => {
+  const [users] = await connection.execute(
+    'SELECT * FROM model_example.users;'
+  )
+
+  return users;
 }
 
 module.exports = {
   isUserValid,
   createUser,
+  getAll,
 }

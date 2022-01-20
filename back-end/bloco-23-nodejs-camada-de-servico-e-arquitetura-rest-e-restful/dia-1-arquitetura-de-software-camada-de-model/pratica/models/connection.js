@@ -6,3 +6,5 @@ const connection = mysql2.createPool({
   password: '390287',
   database: 'model_example'
 })
+
+module.exports = connection;
