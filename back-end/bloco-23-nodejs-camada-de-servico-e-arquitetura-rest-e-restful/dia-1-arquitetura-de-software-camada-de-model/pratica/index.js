@@ -33,5 +33,12 @@ app.get('/user', async (_req, res) => {
   res.status(200).json(users);
 })
 
+app.put('/user/:id', async (req, res) => {
+  const { id } = req.params;
+
+  if ()
+
+})
+
 app.listen(3002, () => console.log('Escutando na porta 3002'));
 
