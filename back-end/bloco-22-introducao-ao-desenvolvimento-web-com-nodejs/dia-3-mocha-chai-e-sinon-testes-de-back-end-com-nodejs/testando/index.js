@@ -1,29 +1,53 @@
-const express = require('express');
-const app = express();
+const { expect } = require('chai');
 
-const drinks = [
-  { id: 1, name: 'Refrigerante Lata', price: 5.0 },
-  { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
-  { id: 3, name: 'Suco 300ml', price: 4.0 },
-  { id: 4, name: 'Suco 1l', price: 10.0 },
-  { id: 5, name: 'Cerveja Lata', price: 4.5 },
-  { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
-];
+const numNaturalFn = require('./numerosNaturais');
 
-// app.get('/drinks', function (req, res) {
-//  res.json(drinks);
-// });
+describe('Executa a função numNaturalFn', () => {
+  describe('quando o número for maior que 0', () => {
+    describe('a resposta', () => {
+      it('é uma "string"', () => {
+        const resposta = numNaturalFn(10);
 
-app.get('/drinks/:id', function (req, res) {
-  console.log('e ai maluco')
-  const { id } = req.params;
-  const drink = drinks.find((r) => r.id === parseInt(id));
+        expect(resposta).to.be.a('string');
+      });
 
-  if (!drink) return res.status(404).json({ message: 'Recipe not found!'});
+      it('é igual a "positivo"', () => {
+        const resposta = numNaturalFn(10);
 
-  res.status(200).json(drink);
-});
+        expect(resposta).to.be.equals('positivo');
+      });
+    });
+  });
 
-app.listen(3001, () => {
-  console.log('Aplicação ouvindo na porta 3001');
+  describe('quando o número for menor que 0', () => {
+    describe('a resposta', () => {
+      it('é uma "string"', () => {
+        const resposta = numNaturalFn(-10);
+
+        expect(resposta).to.be.a('string');
+      });
+
+      it('é igual a "negativo"', () => {
+        const resposta = numNaturalFn(-10);
+
+        expect(resposta).to.be.equals('negativo');
+      });
+    });
+  });
+
+  describe('quando o número for igual a 0', () => {
+    describe('a resposta', () => {
+      it('é uma "string"', () => {
+        const resposta = numNaturalFn(0);
+
+        expect(resposta).to.be.a('string');
+      });
+
+      it('é igual a "neutro"', () => {
+        const resposta = numNaturalFn(0);
+
+        expect(resposta).to.be.equals('neutro');
+      });
+    });
+  });
 });
