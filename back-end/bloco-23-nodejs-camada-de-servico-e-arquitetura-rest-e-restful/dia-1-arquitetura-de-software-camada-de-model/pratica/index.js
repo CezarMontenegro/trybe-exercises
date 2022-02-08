@@ -6,7 +6,7 @@ const { isUserValid, createUser, getAll } = require('./models/User');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/user', async (req, res) => {
+app.post('/user', rescue(async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
   if(!isUserValid(firstName, lastName, email, password)) {
@@ -25,19 +25,17 @@ app.post('/user', async (req, res) => {
     "email": "calebe.junior@gmail.com"
   })
 
-})
+}));
 
-app.get('/user', async (_req, res) => {
+app.get('/user', rescue(async (_req, res) => {
   const users = await getAll();
 
   res.status(200).json(users);
-})
+}));
 
-app.put('/user/:id', async (req, res) => {
-  const { id } = req.params;
-
-  if ()
-
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ message: 'Erro inesperado!'})
 })
 
 app.listen(3002, () => console.log('Escutando na porta 3002'));
